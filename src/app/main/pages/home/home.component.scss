@@ -2,6 +2,7 @@ mat-toolbar {
   box-shadow: rgba(0, 0, 0, 0.35) 0px -4px 15px;
   height: 4rem;
   position: relative;
+  min-width: 100%;
 
   .items {
     width: 50%;
@@ -15,29 +16,45 @@ mat-toolbar {
 
     &--menus {
 
+      span {
+        font-size: 1.1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+      }
     }
 
   }
 }
 
 mat-card {
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+  border-radius: 0.5rem;
 }
 
 .home {
+  flex: 1 1 auto;
+  width: 100%;
   background-color: var(--principal-background-color);
   min-height: 100%;
   display: flex;
   align-items: flex-start;
 
   &--menu {
-    width: 20%;
     padding: 3rem;
+    width: 20%;
+
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+      background-color: transparent !important;
+    }
 
     mat-card {
-      height: 35rem;
+      height: 100%;
     }
+
+    mat-form-field {
+      width: 100%;
+    }
+
+
   }
 
   &--items {
