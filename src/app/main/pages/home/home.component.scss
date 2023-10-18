@@ -1,0 +1,62 @@
+mat-toolbar {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -4px 15px;
+  height: 4rem;
+  position: relative;
+
+  .items {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &--logo {
+      margin-left: 2rem;
+    }
+
+    &--menus {
+
+    }
+
+  }
+}
+
+mat-card {
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+
+.home {
+  background-color: var(--principal-background-color);
+  min-height: 100%;
+  display: flex;
+  align-items: flex-start;
+
+  &--menu {
+    width: 20%;
+    padding: 3rem;
+
+    mat-card {
+      height: 35rem;
+    }
+  }
+
+  &--items {
+    margin: 3rem;
+    width: 80%;
+
+    &--search {
+      mat-card {
+        height: 10rem;
+      }
+    }
+
+    &--list {
+      margin-top: 2rem;
+
+      mat-card {
+        min-height: 35rem;
+      }
+
+    }
+  }
+}
